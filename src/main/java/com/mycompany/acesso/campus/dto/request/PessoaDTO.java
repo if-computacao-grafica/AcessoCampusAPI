@@ -4,17 +4,13 @@
  */
 package com.mycompany.acesso.campus.dto.request;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.mycompany.acesso.campus.entities.NivelAcesso;
-import com.mycompany.acesso.campus.entities.HorarioSemanal;
 /**
  *
  * @author skmat
@@ -30,12 +26,4 @@ public class PessoaDTO {
     @NotEmpty
     @Size(min = 2, max = 100)
     private String fullName;
-
-    @Valid
-    @NotNull
-    private HorarioSemanal horarioSemanal;
-
-    @Valid
-    @NotNull
-    private NivelAcesso nivelAcesso;
 }
